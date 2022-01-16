@@ -8,6 +8,23 @@
 [![XO code style](https://badgen.net/badge/code%20style/XO/cyan)](https://github.com/xojs/xo)
 [![npm downloads](https://img.shields.io/npm/dt/piez.svg?style=flat-square)](https://www.npmjs.com/package/piez)
 
+## Node installation
+
+```shell
+npm i piez
+```
+
+## Example
+
+```javascript
+import {
+	isVibrating,
+	startVibrate,
+	stopVibrate,
+	toggleVibrate
+} from 'piez'
+```
+
 ## Credit
 
 Inspired by [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API#continued_vibrations)
