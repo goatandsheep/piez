@@ -19,9 +19,9 @@ function stopVibrate(verbose = false) {
 	if (verbose && !window.navigator.vibrate) {
 		throw new Error(ERROR_NO_NAV_VIBRATE);
 	}
-
-	if (_vibrateInterval) {
+	if (_vibrateInterval) {		
 		clearInterval(_vibrateInterval);
+		_vibrateInterval = null
 	}
 
 	window.navigator.vibrate(0);
@@ -60,8 +60,8 @@ function startVibrate(duration = 10000, interval = 10000, verbose = false) {
 		throw new Error(ERROR_NO_NAV_VIBRATE);
 	}
 
-	if (!vibrating) {
 		_repeatVibrate(duration);
+	if (!_vibrateInterval) {
 		_vibrateInterval = setInterval(() => {
 			_repeatVibrate(duration);
 		}, interval);

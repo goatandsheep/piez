@@ -23,6 +23,7 @@ describe('basic test that the code completes', () => {
 	});
 
 	afterEach(() => {
+		stopVibrate();
 		jest.resetModules();
 		windowSpy.mockRestore();
 	});
