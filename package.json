@@ -7,6 +7,7 @@
     "index.js"
   ],
   "scripts": {
+    "build": "browserify -o docs/bundle.js ./index.js -s Piez",
     "lint": "xo",
     "lint:fix": "xo --fix",
     "test": "jest"
@@ -31,6 +32,7 @@
   },
   "homepage": "https://github.com/goatandsheep/vibrate-toggle#readme",
   "devDependencies": {
+    "browserify": "^17.0.0",
     "codecov": "^3.8.1",
     "jest": "^26.6.3",
     "xo": "^0.37.1"
