@@ -1,6 +1,6 @@
 {
   "name": "piez",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple mobile browser library for toggling vibration.",
   "main": "index.js",
   "files": [
