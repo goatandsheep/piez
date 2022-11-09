@@ -1,4 +1,5 @@
 let vibrateInterval;
+let vibrating = false;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {
@@ -13,6 +14,7 @@ function stopVibrate() {
 	}
 
 	navigator.vibrate(0);
+	vibrating = false;
 	document.querySelector('#state').innerHTML = 'idle';
 }
 
@@ -25,5 +27,6 @@ function startPersistentVibrate(duration = 10000, interval = 10000) {
 		vibrateInterval = setInterval(() => {
 			startVibrate(duration);
 		}, interval);
+		vibrating = true;
 	}
 }
